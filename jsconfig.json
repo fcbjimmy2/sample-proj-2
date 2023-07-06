@@ -1,0 +1,7 @@
+{
+  "compilerOptions": {
+    "baseUrl": "."
+  },
+  "include": ["src/**/*", "pages/admin/operations/course-enrollment/SimpleModal.js"],
+  "exclude": ["node_modules", "**/node_modules/*"]
+}

@@ -1,0 +1,23 @@
+import _mock from './mock/_mock';
+
+export default function (mysqlPool) {
+    
+  const getTeachingTeam = () => {
+    return [...Array(8)].map((_, index) => ({
+        id: _mock.id(index),
+        name: _mock.name.fullName(index),
+        role: _mock.role(index),
+        photo: `https://zone-assets-api.vercel.app/assets/images/members/member_${index + 1}.jpg`,
+        socialLinks: {
+          facebook: `facebook/${_mock.name.fullName(index)}`,
+          instagram: `instagram/${_mock.name.fullName(index)}`,
+          linkedin: `linkedin/${_mock.name.fullName(index)}`,
+          twitter: `twitter/${_mock.name.fullName(index)}`,
+        },
+    }));
+  };
+
+  return {
+    getTeachingTeam
+  }
+};
